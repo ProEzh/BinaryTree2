@@ -1,0 +1,9 @@
+c:\users\valery\documents\visual studio 2010\Projects\BinaryTree\BinaryTree\bin\Debug\BinaryTree.exe
+c:\users\valery\documents\visual studio 2010\Projects\BinaryTree\BinaryTree\bin\Debug\BinaryTree.pdb
+c:\users\valery\documents\visual studio 2010\Projects\BinaryTree\BinaryTree\obj\x86\Debug\BinaryTree.exe
+c:\users\valery\documents\visual studio 2010\Projects\BinaryTree\BinaryTree\obj\x86\Debug\BinaryTree.pdb
+C:\Users\Valery\Documents\GitHub\BinaryTree\BinaryTree\obj\x86\Debug\BinaryTree.exe
+C:\Users\Valery\Documents\GitHub\BinaryTree\BinaryTree\obj\x86\Debug\BinaryTree.pdb
+C:\Users\Valery\Documents\GitHub\BinaryTree\BinaryTree\bin\Debug\BinaryTree.exe
+C:\Users\Valery\Documents\GitHub\BinaryTree\BinaryTree\bin\Debug\BinaryTree.pdb
+C:\Users\Valery\Documents\GitHub\BinaryTree\BinaryTree\obj\x86\Debug\BinaryTree.csprojResolveAssemblyReference.cache
