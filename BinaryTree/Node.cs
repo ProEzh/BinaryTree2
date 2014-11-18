@@ -52,23 +52,32 @@ namespace BinaryTree
         
         public void Print()
         {
-//            TODO
+            //            TODO
         }
-
-        public Node hasRightNode(Node element)
+        
+        public bool HasRightNode()
         {
-            if (element.RightNode != null)
-                return RightNode;
-            else
-                return null;
+            return rightNode_ != null;
         }
-
-        public Node hasLeftNode(Node element)
+        
+        public bool HasLeftNode()
         {
-            if (element.LeftNode != null)
-                return LeftNode;
-            else
-                return null;
+            return leftNode_ != null;
+        }
+        
+        public Node InsertChildWithValue(int value)
+        {
+            if (value > value_) {
+                Node child = new Node(value);
+                child.RightNode = child;
+                return child;
+            } else if (value < value_) {
+                Node child = new Node(value);
+                child.LeftNode = child;
+                return child;
+            } else {
+                return this;
+            }
         }
     }
 }

@@ -26,62 +26,52 @@ namespace BinaryTree
             rootNode_ = null;
         }
         
+        public bool IsEmpty() {
+            return rootNode_ == null;
+        }
+        
+        public Node SetRootNodeWithValue(int value) {
+            rootNode_ = new Node (value);
+            return rootNode_;
+        }
+        
         public Node InsertNodeWithValue(int value)
         {
-<<<<<<< HEAD
-            if (rootNode_ == null)
-            {
-                rootNode_.Value = value;
-                return rootNode_;
+            if (this.IsEmpty ()) {
+                return this.SetRootNodeWithValue (value);
             }
+            
             Node currentNode = rootNode_;
             for (;;)
             {
                 if (value > currentNode.Value)
                 {
-                    if (currentNode.hasRightNode(currentNode) != null)
+                    if ( currentNode.HasRightNode() )
                     {
                         currentNode = currentNode.RightNode;
                     }
                     else
                     {
-                        currentNode = currentNode.RightNode;
-                        currentNode.Value = value;
                         break;
                     }
                 }
-                if (value < currentNode.Value)
-                {
-                    if (currentNode.hasLeftNode(currentNode) != null)
-                    {
+                if (value < currentNode.Value) {
+                    if (currentNode.HasLeftNode ()) {
                         currentNode = currentNode.LeftNode;
-                    }
-                    else
-                    {
-                        currentNode = currentNode.LeftNode;
-                        currentNode.Value = value;
-=======
-            Node currentNode = rootNode_;
-            for (;;) {
-                if (  value > currentNode.GetValue() ) {
-                    if ( currentNode.hasRightNode() ) {
-                        currentNode = currentNode.getRightNode();
-                    }
-                    else {
->>>>>>> 64edd2f6d932f4b492d68fd458cc229c501cf1d9
+                    } else {
                         break;
                     }
+                } else {
+                    break;
                 }
             }
-<<<<<<< HEAD
-            return currentNode;
-=======
->>>>>>> 64edd2f6d932f4b492d68fd458cc229c501cf1d9
+            
+            return currentNode.InsertChildWithValue(value);
         }
         
         public void Print()
         {
-//          TODO
+            //          TODO
         }
         
         private static void Main()
@@ -92,7 +82,7 @@ namespace BinaryTree
             tree.InsertNodeWithValue(4);
             tree.InsertNodeWithValue(5);
             tree.Print();
-//          TODO OUTPUT: 1
+            //          TODO OUTPUT: 1
         }
     }
 }
