@@ -69,11 +69,11 @@ namespace BinaryTree
         {
             if (value > value_) {
                 Node child = new Node(value);
-                child.RightNode = child;
+                this.RightNode = child;
                 return child;
             } else if (value < value_) {
                 Node child = new Node(value);
-                child.LeftNode = child;
+                this.LeftNode = child;
                 return child;
             } else {
                 return this;
