@@ -58,10 +58,12 @@ namespace BinaryTree
                 if (value < currentNode.Value) {
                     if (currentNode.HasLeftNode ()) {
                         currentNode = currentNode.LeftNode;
-                    } else {
+                    } 
+                    else {
                         break;
                     }
-                } else {
+                }
+                else {
                     break;
                 }
             }
@@ -71,7 +73,23 @@ namespace BinaryTree
         
         public void Print()
         {
-            //          TODO
+            if (this.IsEmpty())
+                Console.WriteLine("Дерева нет");
+            Node currentNode = rootNode_;
+            for (; ; )
+            {
+                if (currentNode.RightNode != null)
+                {
+                    currentNode = currentNode.RightNode;
+                    Console.Write("-");
+                    currentNode.Print();
+                }
+                else 
+                {
+                    Console.Write(currentNode.Value);
+                    break;
+                }
+            }
         }
         
         private static void Main()
@@ -81,6 +99,15 @@ namespace BinaryTree
             tree.InsertNodeWithValue(2);
             tree.InsertNodeWithValue(4);
             tree.InsertNodeWithValue(5);
+            tree.InsertNodeWithValue(6);
+            tree.InsertNodeWithValue(7);
+            tree.InsertNodeWithValue(8);
+            tree.InsertNodeWithValue(9);
+            tree.InsertNodeWithValue(10);
+            tree.InsertNodeWithValue(11);
+            tree.InsertNodeWithValue(12);
+            tree.InsertNodeWithValue(13);
+            tree.InsertNodeWithValue(14);
             tree.Print();
             //          TODO OUTPUT: 1
         }

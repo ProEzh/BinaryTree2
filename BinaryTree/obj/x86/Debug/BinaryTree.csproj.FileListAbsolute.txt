@@ -7,3 +7,8 @@ C:\Users\Valery\Documents\GitHub\BinaryTree\BinaryTree\obj\x86\Debug\BinaryTree.
 C:\Users\Valery\Documents\GitHub\BinaryTree\BinaryTree\bin\Debug\BinaryTree.exe
 C:\Users\Valery\Documents\GitHub\BinaryTree\BinaryTree\bin\Debug\BinaryTree.pdb
 C:\Users\Valery\Documents\GitHub\BinaryTree\BinaryTree\obj\x86\Debug\BinaryTree.csprojResolveAssemblyReference.cache
+C:\Users\Valery\Documents\GitHub\BinaryTree2\BinaryTree\obj\x86\Debug\BinaryTree.exe
+C:\Users\Valery\Documents\GitHub\BinaryTree2\BinaryTree\obj\x86\Debug\BinaryTree.pdb
+C:\Users\Valery\Documents\GitHub\BinaryTree2\BinaryTree\bin\Debug\BinaryTree.exe
+C:\Users\Valery\Documents\GitHub\BinaryTree2\BinaryTree\bin\Debug\BinaryTree.pdb
+C:\Users\Valery\Documents\GitHub\BinaryTree2\BinaryTree\obj\x86\Debug\BinaryTree.csprojResolveAssemblyReference.cache
