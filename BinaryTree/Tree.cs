@@ -80,22 +80,65 @@ namespace BinaryTree
 			}
 		}
 
+        public bool SearchElementInTree(int value)
+        {
+            if (this.IsEmpty())
+            {
+                Console.WriteLine("Дерево не заполнено");
+                return false;
+            }
+            else
+            {
+                Node currentNode = rootNode_;
+                for (; ; )
+                {
+                    if (value > currentNode.Value)
+                    {
+                        if (currentNode.HasRightNode())
+                        {
+                            currentNode = currentNode.RightNode;
+                            continue;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Элемент не найден");
+                            return false;
+                        }
+                    }
+                    else if (value < currentNode.Value)
+                    {
+                        if (currentNode.HasLeftNode())
+                        {
+                            currentNode = currentNode.LeftNode;
+                            continue;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Элемент не найден");
+                            return false;
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Элемент найден");
+                        return true;
+                    }
+                }
+            }
+        }
+
 		private static void Main()
 		{
 			Tree tree = new Tree();
-			tree.InsertNodeWithValue(3);
-			tree.InsertNodeWithValue(2);
-			tree.InsertNodeWithValue(4);
-			tree.InsertNodeWithValue(5);
-			tree.InsertNodeWithValue(6);
 			tree.InsertNodeWithValue(7);
-			tree.InsertNodeWithValue(8);
-			tree.InsertNodeWithValue(9);
-			tree.InsertNodeWithValue(10);
+			tree.InsertNodeWithValue(3);
 			tree.InsertNodeWithValue(11);
-			tree.InsertNodeWithValue(12);
-			tree.InsertNodeWithValue(13);
-			tree.InsertNodeWithValue(14);
+			tree.InsertNodeWithValue(5);
+			tree.InsertNodeWithValue(1);
+			tree.InsertNodeWithValue(15);
+            tree.InsertNodeWithValue(6);
+            tree.InsertNodeWithValue(4);
+            tree.SearchElementInTree(1);
 			tree.Print();
 		}
 	}
