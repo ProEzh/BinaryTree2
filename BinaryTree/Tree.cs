@@ -82,52 +82,41 @@ namespace BinaryTree
 
         public bool SearchElementInTree(int value)
         {
-            if (this.IsEmpty())
-            {
+            if ( this.IsEmpty() ) {
                 Console.WriteLine("Дерево не заполнено");
                 return false;
             }
-            else
-            {
-                Node currentNode = rootNode_;
-                for (; ; )
-                {
-                    if (value > currentNode.Value)
-                    {
-                        if (currentNode.HasRightNode())
-                        {
-                            currentNode = currentNode.RightNode;
-                            continue;
-                        }
-                        else
-                        {
-                            Console.WriteLine("Элемент не найден");
-                            return false;
-                        }
+        
+            Node currentNode = rootNode_;
+            for ( ;; ) {
+                if ( value > currentNode.Value ) {
+                    if ( currentNode.HasRightNode() ) {
+                        currentNode = currentNode.RightNode;
+                        continue;
                     }
-                    else if (value < currentNode.Value)
-                    {
-                        if (currentNode.HasLeftNode())
-                        {
-                            currentNode = currentNode.LeftNode;
-                            continue;
-                        }
-                        else
-                        {
-                            Console.WriteLine("Элемент не найден");
-                            return false;
-                        }
+                    else {
+                        Console.WriteLine("Элемент не найден");
+                        return false;
                     }
-                    else
-                    {
-                        Console.WriteLine("Элемент найден");
-                        return true;
+                }
+                else if ( value < currentNode.Value ) {
+                    if ( currentNode.HasLeftNode() ) {
+                        currentNode = currentNode.LeftNode;
+                        continue;
                     }
+                    else {
+                        Console.WriteLine("Элемент не найден");
+                        return false;
+                    }
+                }
+                else {
+                    Console.WriteLine("Элемент найден");
+                    return true;
                 }
             }
         }
 
-		private static void Main()
+		public static void Main()
 		{
 			Tree tree = new Tree();
 			tree.InsertNodeWithValue(7);
